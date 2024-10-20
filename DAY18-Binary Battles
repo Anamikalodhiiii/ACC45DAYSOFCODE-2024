@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;  
+    cin >> t;
+
+    while (t--) {
+        int n, a, b; 
+        cin >> n >> a >> b;
+
+        int rounds = 0;
+        while (n > 1) {
+            n /= 2;
+            rounds++;
+        }
+
+        int totalTime = (rounds * a) + ((rounds - 1) * b);
+
+        cout << totalTime << endl;
+    }
+
+    return 0;
+}
+
+
+
