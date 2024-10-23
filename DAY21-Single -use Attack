@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while(T--) {
+        int H, X, Y;
+        cin >> H >> X >> Y;
+
+        if (H <= Y) {
+            cout << 1 << endl;
+            continue;
+        }
+
+        int remainingHealth = H - Y;
+
+        int normalAttacks = (remainingHealth + X - 1) / X; 
+        
+        int totalAttacks = 1 + normalAttacks;
+
+        cout << totalAttacks << endl;
+    }
+    return 0;
+}
