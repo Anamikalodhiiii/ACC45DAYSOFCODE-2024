@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+string isPossible(int a, int b, int c, int d) {
+    if (c < a) return "IMPOSSIBLE";
+    
+    if (d < b) return "IMPOSSIBLE";
+    
+    return "POSSIBLE";
+}
+
+int main() {
+    int t;  
+    cin >> t;
+
+    while (t--) {
+        int a, b, c, d; 
+        cin >> a >> b >> c >> d;
+
+        cout << isPossible(a, b, c, d) << endl;
+    }
+
+    return 0;
+}
