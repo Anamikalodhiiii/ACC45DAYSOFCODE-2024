@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        long long N;
+        cin >> N;
+        
+        long long setsOfFour = N / 5;
+        
+        long long remainingGifts = N % 5;
+        
+        long long totalCoins = setsOfFour * 4 + remainingGifts;
+
+        cout << totalCoins << endl;
+    }
+    
+    return 0;
+}
